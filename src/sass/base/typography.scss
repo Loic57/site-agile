@@ -1,0 +1,159 @@
+
+html, body {
+  font-size: $font-size-main;
+
+  @media(max-width: 1024px) {
+    font-size: 55%;
+  }
+}
+
+body, input, select, textarea, button {
+  font-family: $font-family;
+  color: $color-text;
+  line-height: $line-height;
+  font-size: $font-size-main-rem;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  position: relative;
+  line-height: 1.2;
+}
+
+
+p {
+  font-weight: 500;
+  margin-bottom: 3rem;
+  &:last-child {margin-bottom: 0;}
+
+  strong {color: $gray-darkest;}
+
+  a {
+    text-decoration: underline;
+    &:hover {text-decoration: underline;color: $main-color-dark;}
+  }
+}
+
+a {
+  color: $main-color;
+  text-decoration: none;
+}
+
+
+.link-next, .link-prev, .link-follow {
+  color: $main-color;
+  text-decoration: underline;
+  position: relative;
+  display: inline-block;
+
+  &:hover {color: $main-color-dark;}
+
+  &:before {
+    position: absolute;
+    font-weight: 900;
+    top: 50%;
+    @include translateY(-50%);
+    font-family: "Font Awesome 5 Free";
+  }
+}
+
+.link-prev {
+  padding-left: 2.5rem;
+
+  &:before {
+    position: absolute;
+    content: "\f30a";
+    left: 0;
+  }
+}
+
+.link-next {
+  padding-right: 2.5rem;
+
+  &:before {
+    content: "\f30b";
+    right: 0;
+  }
+}
+
+.link-follow {
+  padding-right: 2rem;
+
+  &:before {
+    content: "\f054";
+    right: 0;
+    font-size: 1.4rem;
+  }
+}
+
+h1 {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  color: $gray-darkest;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 0;
+  color: $main-color;
+}
+
+h3 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: $gray-darkest;
+  margin-top: 3rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: $gray-darkest;
+  margin-top: 3rem;
+}
+
+h5 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: $gray-darkest;
+  margin-top: 3rem;
+}
+
+h6 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: $gray-darkest;
+  margin-top: 3rem;
+}
+
+
+.text-bold {font-weight: 700;}
+.text-light {font-weight: 300;}
+
+
+.text-important {font-size: 2rem;}
+
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+.text-justify {text-align: justify;}
+.text-italic {font-style: italic;}
+
+.text-uppercase {text-transform: uppercase;}
+.text-lowercase {text-transform: lowercase;}
+
+
+
+
+//Loop for creating font-size from 1rem to 10rem ...1.1...1.2...1.3....1.4...1.5..1.6...till 10
+@for $i from 10 through 100 {
+  .font-size-#{$i} { font-size: calc(#{$i}rem/10)}
+}

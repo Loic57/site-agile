@@ -1,0 +1,21 @@
+
+.page-header.page-header--left-bar + .page-header--mobile + .page-content,
+.page-header.page-header--left-bar + .page-header--mobile + main,
+.page-header.page-header--left-bar + .page-header--mobile + .page-fullscreen {
+  margin-left: 30rem;
+  @media(max-width: 1024px) {
+    margin-left: 0;
+  }
+}
+
+
+.page-content {
+  margin-top: 10rem;
+  padding: 0 3rem;
+  overflow-x: hidden;
+
+  @media(max-width: 767px) {
+    margin-top: 3rem;
+    padding: 0;
+  }
+}

@@ -1,0 +1,134 @@
+body.modal-open {
+	overflow: hidden;
+}
+
+.page-modals {
+	@include position(fixed, 0,0,0,0);
+	visibility: hidden;
+	z-index: 11;
+	overflow-x: hidden;
+	overflow-y: auto;
+	@include opacity(0);
+	@include transition(0.3s);
+
+	&.show {
+		@include opacity(1);
+		visibility: visible;
+		@include transition(0.3s);
+	}
+
+
+
+
+	#pageModalsOverlayer {
+		@include position(fixed, 0,0,0,0);
+		background-color: rgba(0,0,0,0.7);
+		@include opacity(1);
+		cursor: pointer;
+	}
+
+
+	.box-modal {
+		background-color: #ffffff;
+		width: 90%;
+		max-width: 900px;
+		margin: auto;
+		padding: 3rem;
+		@include position(absolute, 50%, 0, auto, 0);
+		@include translateY(-50%);
+		@include opacity(0);
+		visibility: hidden;
+
+		h1, h2, h3, h4, h5, h6 {margin-top: 0;}
+
+		&.show {
+			@include opacity(1);
+			visibility: visible;
+		}
+
+		.box-modal__header {
+			border-bottom: 1px solid $gray-lightest;
+			margin-bottom: 3rem;
+			padding-bottom: 1rem;
+
+			button {
+				position: absolute;
+				top: 1px;
+				right: 1px;
+				background-color: transparent;
+				color: $gray-darkest;
+				padding: 2.5rem 3rem;
+				font-size: 2rem;
+				span {display: none;}
+				&:focus {outline: 1px solid $main-color;}
+			}
+		}
+
+		.box-modal__footer {
+			border-top: 1px solid $gray-lightest;
+			padding-top: 3rem;
+			margin-top: 3rem;
+		}
+
+
+		@media(max-width: 767px) {
+			width: 100%;
+			min-height: 100%;
+			padding: 1.5rem;
+			padding-top: 2rem;
+			top: 0;
+			@include transform(none);
+
+			.box-modal__header {
+				button {
+					position: fixed;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					top: auto;
+					z-index: 3;
+					color: #ffffff;
+					width: 100%;
+					padding: 2rem;
+					background-color: $main-color;
+					box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+
+					i {display: none;}
+					span {
+						display: block;
+						text-transform: uppercase;
+						letter-spacing: 1px;
+						font-size: 1.8rem;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+}
+
+.close-overlayer {
+	@include position(fixed, 0,0,0,0);
+	cursor: pointer;
+
+	i {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		color: #ffffff;
+		font-size: 2.4rem;
+
+	}
+
+
+	@media(max-width: 767px) {
+		position: absolute;
+		bottom: auto;
+		left: auto;
+		z-index: 10;
+
+		i {
+			color: #000000;
+		}
+	}
+}
