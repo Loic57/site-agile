@@ -15,8 +15,8 @@
   }
 
   .page-nav {
-    flex: 0 0 80%;
-    max-width: 80%;
+    flex: 0 0 70%;
+    max-width: 70%;
     text-align: right;
 
     .nav-primary {
@@ -43,6 +43,7 @@
           position: relative;
           @include flex-container();
           align-items: center;
+          font-weight: 600;
           color: $gray;
           font-size: 1.6rem;
 
@@ -104,11 +105,14 @@
 
   @media(max-width: 1024px) {
     @include transition(0.3s);
-    @include translateX(-100%);
+    @include scale(0.9);
+    @include opacity(0);
     overflow-y: auto;
     overflow-x: hidden;
     height: 100%;
-    width: 300px;
+    width: 100%;
+    visibility: hidden;
+
 
     .page-wrapper {
       @include flex-direction-column();
@@ -126,7 +130,11 @@
       max-width: 100%;
       width: 100%;
       flex: 1;
-      text-align: left;
+      text-align: center;
+      @include flex-container();
+      @include flex-h-align-center();
+      @include flex-v-align-center();
+      height: 90vh;
 
       .nav-primary {
         > li {
@@ -137,10 +145,12 @@
           &.nav-primary__has-sub-level.show ul {display: block;}
           > a {
             color: $gray;
-            text-align: left;
+            text-align: center;
             padding: 3rem;
-            padding-right: 5rem;
             font-size: 2rem;
+            font-weight: 600;
+            font-size: 2.6rem;
+            display: block;
             &:after {content: none;}
 
             &:focus {outline: 1px solid #ffffff;}
@@ -162,7 +172,8 @@
           }
 
           &:hover {
-            background-color: $main-color-lightest;
+            background-color: transparent;
+            a {color: $main-color;}
 
             &.nav-primary__has-sub-level {
               &:after {@include rotate(0);}
@@ -186,15 +197,44 @@
         }
       }
     }
+
   }
 }
 
+.nav-lang {
+  flex: 0 0 10%;
+  max-width: 10%;
+  text-align: right;
 
+  li {
+    display: inline-block;
+    margin-left: 1rem;
+    a {
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: $color-text;
+      position: relative;
+      &:after {
+        content: "/";
+        position: absolute;
+        right: -10px;
+        top: -1px;
+        color: $color-text;
+      }
+
+      &.nav-lang--selected {
+        color: $main-color;
+      }
+    }
+
+    &:last-child a:after {content: none;}
+  }
+}
 
 .page-header--mobile {
   display: none;
   padding: 2rem;
-  z-index: 1;
+  z-index: 2;
   box-shadow: -2px 0px 10px -3px rgba(0,0,0,.2);
 
   .page-header__logo-color img, .page-header__logo-white img {
@@ -208,35 +248,52 @@
     top: 0;
     left: 0;
     right: 0;
+    .nav-lang {
+      position: absolute;
+      right: 3rem;
+      top: 30px;
+      flex: 1;
+      max-width: inherit;
+    }
+  }
+
+  @media(max-width: 767px) {
+    .nav-lang {
+      li {margin-left: 2rem;}
+      a {font-size: 2rem;}
+    }
   }
 }
 
 .trigger-nav-container {
   display: none;
-  position: absolute;
-  top: 3.2rem;
-  right: 5rem;
-  background-color: transparent;
-  justify-content: center;
-  align-items: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $main-color;
+  width: 100%;
+  padding: 3rem;
+  z-index: 3;
   cursor: pointer;
+  text-align: center;
   @include transition(0.2s);
   @include flex-direction-row();
+  box-shadow: -2px 0px 10px -3px rgba(0,0,0,.2);
 
   &:focus {outline: 1px auto $main-color;}
 
   .trigger-nav-container__title {
-    color: $main-color;
-    font-weight: 300;
+    color: #ffffff;
+    font-weight: 600;
     text-transform: uppercase;
-    display: inline-block;
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 1px;
-    margin-right: 1rem;
+
   }
 
   .trigger-nav-container__icon-burger {
-    display: inline-block;
+    display: none;
     position: relative;
     width: 25px;
     height: 1px;
@@ -255,13 +312,11 @@
     &:after {bottom: -7px;}
   }
 
-  @media(max-width: 1024px) {
-    @include flex-container();
+  @media(max-width: 1023px) {
+    display: block;
   }
 
-  @media(max-width: 640px) {
-    right: 3rem;
-  }
+
 }
 
 #pageNavOverlay {
@@ -282,7 +337,9 @@ body {
   &.menu-opened {
     overflow: hidden;
     .page-header {
-      @include translateX(0%);
+      @include scale(1);
+      @include opacity(1);
+      visibility: visible;
       @include transition(0.3s);
     }
 

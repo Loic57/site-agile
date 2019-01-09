@@ -4,7 +4,7 @@
   color: #ffffff;
   cursor: pointer;
   position: relative;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.5rem;
   border: 1px solid transparent;
   text-decoration: none;
@@ -67,6 +67,11 @@
 
   &.bg-yellow {
     &:hover, &:focus {background-color: darken($yellow, 20%);}
+  }
+
+  &.bg-white {
+    color: $main-color;
+    &:hover, &:focus {background-color: $main-color;color: white;}
   }
 
   &.bg-gray-darkest {

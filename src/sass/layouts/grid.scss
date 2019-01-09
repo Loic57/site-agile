@@ -134,3 +134,38 @@
     }
   }
 }
+
+
+.grid-contact-banner {
+  .column:last-child {text-align: right;}
+
+  @media(max-width: 767px) {
+    .column {text-align: center!important;}
+  }
+}
+
+.grid-awards {
+  img {width: 250px;}
+}
+
+.grid-customers {
+  justify-content: center;
+  img {
+    width: 150px;
+    margin: auto;
+  }
+
+  @media(max-width: 1024px) {
+    img {
+      width: 100px;
+      margin: auto;
+    }
+  }
+
+  @media(max-width: 767px) {
+    .column {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+  }
+}

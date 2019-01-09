@@ -23,7 +23,7 @@
   padding: 5rem 0;
   text-align: center;
   p {color: #ffffff;}
-  h2 {color: #ffffff;margin-top: 0!important;}
+  h2 {color: #ffffff;margin-top: 0!important;text-align: center;text-transform: uppercase;letter-spacing: 1px;margin-bottom: 3rem;}
 }
 
 
@@ -69,4 +69,37 @@
       font-weight: 700;
     }
   }
+}
+
+
+
+.section-2 {
+  padding: 5rem 0;
+  text-align: center;
+
+  h2 {color: $gray-darkest;}
+}
+
+
+.section-3 {
+  position: relative;
+  padding: 7rem 0;
+  background-position: right center;
+
+
+  &:before {
+    background: $main-color;
+    background: -moz-linear-gradient(left, $main-color 50%, rgba($secondary-color, 0) 100%);
+    background: -webkit-linear-gradient(left, $main-color 50%, rgba($secondary-color, 0) 100%);
+    background: linear-gradient(to right, $main-color 50%, rgba($secondary-color, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$main-color', endColorstr='$secondary-color',GradientType=1 );
+    content: "";
+    @include position(absolute, 0,0,0,0);
+  }
+
+
+
+
+  p {color: #ffffff;}
+  h2 {color: #ffffff;margin: 0!important;text-transform: uppercase;letter-spacing: 1px;margin-bottom: 3rem;}
 }
