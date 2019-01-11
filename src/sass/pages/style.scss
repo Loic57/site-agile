@@ -11,6 +11,8 @@
 
 .page-content {
 
+  @include translateZ(0);
+
   padding: 0 3rem;
   overflow-x: hidden;
 
@@ -23,5 +25,63 @@
 
 .customers {
   text-align: center;
+}
 
+
+.page-wysiwyg {
+
+  h2 {
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+  }
+
+  ul {
+     li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+
+      &:before {
+        @include position(absolute, 0, auto, auto, 0);
+        content: "\f105";
+        font-family: $icon-font-family;
+        font-weight: 900;
+        color: $main-color;
+      }
+
+      ul {margin-top: 1rem;}
+    }
+  }
+
+  ol{
+    list-style-type: decimal;
+
+    li {
+      margin-left: 2rem;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    ol {margin-top: 1rem;list-style-type: decimal;}
+  }
+}
+
+
+.column-infos {
+  background-color: $main-color;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  
+
+  .test {
+    background: blue;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom:0
+  }
 }

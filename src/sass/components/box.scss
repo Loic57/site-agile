@@ -538,3 +538,91 @@
 		color: $color-text!important;
 	}
 }
+
+.box-job {
+	@include flex-container();
+	@include flex-v-align-center();
+	@include transition(0.2s);
+	border-radius: 4px;
+	box-shadow: 0 2px 20px 0 rgba(0,0,0,0.08);
+	position: relative;
+	padding: 2rem;
+	border: 1px solid $gray-lightest;
+
+	.box-job__image {
+		text-align: center;
+		flex: 0 0 15%;
+		img {width: 60px;}
+	}
+
+	.box-job__content {
+		@include flex-container();
+		@include flex-direction-column();
+		padding-left: 1rem;
+
+		h3 {
+			color: $main-color;
+			font-size: 2.4rem;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+
+		.content__type {
+			font-weight: 600;
+			font-size: 1.8rem;
+			color: $gray-darkest;
+		}
+
+		.content__location {
+			font-weight: 600;
+			font-size: 1.6rem;
+			color: $color-text;
+		}
+
+		.content__date {
+			position: absolute;
+			right: 3rem;
+			bottom: 2rem;
+			font-size: 1.4rem;
+			padding-right: 1rem;
+			color: $color-text;
+
+			&:after {
+				position: absolute;
+				content: "\f017";
+				font-family: $icon-font-family;
+				font-weight: 500;
+				right: -1rem;
+				color: $main-color;
+			}
+		}
+	}
+
+	&:hover {
+		background-color: rgba($main-color, 0.8);
+		@include transition(0.2s);
+		.box-job__content {
+			h3, .content__location, .content__type, .content__date, .content__date:after {color: #ffffff;}
+		}
+	}
+
+	@media(max-width: 767px) {
+		.box-job__content {
+			padding-left: 2rem;
+		}
+	}
+}
+
+.box-infos-contact {
+	background: $main-color;
+	background: -moz-linear-gradient(left, $main-color 0%, $secondary-color 100%);
+	background: -webkit-linear-gradient(left, $main-color 0%,$secondary-color 100%);
+	background: linear-gradient(to right, $main-color 0%,$secondary-color 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$main-color', endColorstr='$secondary-color',GradientType=1 );
+	padding: 5rem;
+	color: #ffffff;
+	border-radius: 4px;
+
+	a {color: #ffffff;}
+
+}

@@ -144,8 +144,28 @@
   }
 }
 
+.grid-jobs {
+  margin-bottom: 5rem;
+}
+
 .grid-awards {
   img {width: 250px;}
+
+  @media(max-width: 767px) {
+    .column {
+      max-width: 33.3333%;
+      flex: 0 0 33.3333%;
+    }
+
+    img {width: 200px;}
+  }
+
+  @media(max-width: 375px) {
+    .column {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+  }
 }
 
 .grid-customers {
@@ -156,6 +176,10 @@
   }
 
   @media(max-width: 1024px) {
+    .column {
+      max-width: 20%;
+      flex: 0 0 20%;
+    }
     img {
       width: 100px;
       margin: auto;
@@ -164,8 +188,67 @@
 
   @media(max-width: 767px) {
     .column {
+      max-width: 33.3333%;
+      flex: 0 0 33.3333%;
+    }
+  }
+
+  @media(max-width: 375px) {
+    .column {
       max-width: 50%;
       flex: 0 0 50%;
+    }
+  }
+}
+
+.grid-2-columns {
+
+  &.is-different {
+    display: none;
+  }
+
+  @media(min-width: 1024px) {
+    &.is-fixed {
+      .wrapper {
+        position: absolute;
+        right: 3rem;
+        left: 3rem;
+      }
+    }
+  }
+
+  .column.w-70 {
+    padding-bottom: 10rem;
+    padding-right: 8rem
+  }
+
+  .column.w-30 {
+    background-color: $main-color;
+    padding: 3rem;
+    position: relative;
+
+    .title {color: #ffffff;font-weight: 600;font-size: 2.6rem;}
+  }
+
+  @media(max-width: 1023px) {
+    &.is-different {
+      display: block;
+    }
+    margin-bottom: 5rem;
+    .column {
+      max-width: 100%;
+      flex: 0 0 100%;
+
+      &.w-70 {padding-right: 1.5rem;}
+    }
+  }
+}
+
+.grid-button-infos-formation {
+  @media(max-width: 767px) {
+    .column {
+      flex: 0 0 50%;
+      max-width: 50%;
     }
   }
 }

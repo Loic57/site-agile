@@ -1,8 +1,5 @@
 .section-1 {
-  box-shadow: 0 17px 12px 0 #f6f6f6;
   padding: 5rem;
-  margin-bottom: 5rem;
-  border: 1px solid #f1f1f1;
 
   @media(max-width: 1024px) {
     padding: 4rem;
@@ -24,6 +21,30 @@
   text-align: center;
   p {color: #ffffff;}
   h2 {color: #ffffff;margin-top: 0!important;text-align: center;text-transform: uppercase;letter-spacing: 1px;margin-bottom: 3rem;}
+
+
+  &.section-2-columns {
+    padding: 0;
+
+    .grid-flex {
+      align-items: center;
+      .column {
+        padding: 0;
+      }
+    }
+
+     @media(max-width: 767px) {
+       padding: 3rem 0;
+       .grid-flex {
+
+         .column {
+           padding: 1.5rem;
+           &:first-child {@include flex-order(2); p {text-align: center!important;}}
+           &:last-child {@include flex-order(1);}
+         }
+       }
+     }
+  }
 }
 
 
@@ -78,6 +99,25 @@
   text-align: center;
 
   h2 {color: $gray-darkest;}
+}
+
+
+.section-background-image {
+  padding: 5rem 0;
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    @include position(absolute, 0,0,0,0);
+    content: "";
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+  }
+
+  h2 {color: #ffffff;}
 }
 
 

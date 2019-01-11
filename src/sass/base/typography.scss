@@ -17,6 +17,10 @@ body, input, select, textarea, button {
   line-height: $line-height;
   font-size: $font-size-main-rem;
   font-weight: 300;
+
+  @media(max-width: 767px) {
+    font-size: 2rem;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

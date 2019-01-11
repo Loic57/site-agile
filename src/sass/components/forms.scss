@@ -1,8 +1,8 @@
 input, select, textarea {
   width: 100%;
   padding: 2rem;
-  background-color: $gray-lightest;
-  border: 0;
+  background-color: #ffffff;
+  border: 1px solid #dfdfdf;
   font-size: 1.6rem;
   border-radius: 4px;
 
@@ -476,4 +476,23 @@ output:-moz-ui-invalid {color: $red;}
   }
 
   .btn {width: 100%;}
+}
+
+
+.form-1 {
+  border: 1px solid $gray-lightest;
+  box-shadow: 0 2px 20px 0 rgba(0,0,0,0.08);
+  padding: 5rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+
+
+  @media(max-width: 767px) {
+
+    padding: 5rem 3rem;
+    button {
+      display: block;
+      width: 100%;
+    }
+  }
 }

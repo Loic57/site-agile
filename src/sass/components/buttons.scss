@@ -74,6 +74,12 @@
     &:hover, &:focus {background-color: $main-color;color: white;}
   }
 
+  &.bg-white-2 {
+    background-color: #ffffff;
+    color: $main-color;
+    &:hover, &:focus {background-color: $main-color;color: white;border-color: #ffffff;}
+  }
+
   &.bg-gray-darkest {
     &:hover, &:focus {background-color: darken($gray-darkest, 20%);}
   }

@@ -149,3 +149,6 @@
 .br-25 {border-radius: 25px!important;}
 .br-30 {border-radius: 30px!important;}
 .rounded {border-radius: 50px!important;}
+
+
+.h-align-middle {@include flex-h-align-center();}
