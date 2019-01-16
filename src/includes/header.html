@@ -7,7 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Go to  http://realfavicongenerator.net/ to get your own favicon readable on all platforms -->
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#c52821">
+  <meta name="msapplication-TileColor" content="#c52821">
+  <meta name="theme-color" content="#ffffff">
 
   <meta name="author" content="agilepartner">
   <meta name="description" content="agilepartner">
@@ -18,53 +24,45 @@
   <meta property="og:description"        content="agilepartner" />
   <meta property="og:image"              content="https://buddycss.com/images/sharer-1.jpg" />
 
-  <link href='//fonts.googleapis.com/css?family=Nunito:400,300,600,700,800,900,300italic,600italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,900" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/buddy.plugins.min.css">
   <link rel="stylesheet" type="text/css" href="css/buddy.css">
 
-  <script type="text/javascript" src="js/buddy.min.js"></script>
+  <script src="https://rawgit.com/mattboldt/typed.js/v2.0.6/lib/typed.min.js"></script>
+  <script type="text/javascript" src="js/buddy.js"></script>
 </head>
 <body>
   <div id="pageNavOverlay"></div>
 
-  <header class="page-header" role="banner">
-    <div class="page-wrapper page-wrapper--full-width">
-      <a href="index.html" class="page-header__logo-color"><img src="images/logo-agilepartner.png"  alt=" " /></a>
-      <div class="page-nav" id="navOne">
-        <nav role="navigation">
-          <ul class="nav-primary">
-            <li><a href="about.html">About</a></li>
-            <li>
-              <a href="#">What we do</a>
-              <ul>
-                <li><a href="softwares-dev.html">Software develpment</a></li>
-                <li><a href="formations.html">Skills development</a></li>
-              </ul>
-            </li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <nav class="nav-lang">
-        <ul>
-          <li><a href="#" class="nav-lang--selected">FR</a></li>
-          <li><a href="#">EN</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <div class="page-header--mobile">
-    <a href="index.html" class="page-header__logo-color"><img src="images/logo-agilepartner.png"  alt=" " /></a>
-    <nav class="nav-lang">
-      <ul>
-        <li><a href="#" class="nav-lang--selected">FR</a></li>
-        <li><a href="#">EN</a></li>
-      </ul>
-    </nav>
-  </div>
-  <button class="trigger-nav-container" data-trigger-nav="navOne">
-    <span class="trigger-nav-container__title">Menu</span>
-    <span class="trigger-nav-container__icon-burger"></span>
-  </button>
+ <header class="page-header bottom-bar-mobile" role="banner">
+   <div class="page-wrapper page-wrapper--full-width">
+     <a href="index.html" class="page-logo-color"><img src="images/logo-agilepartner.png"  alt=" " /></a>
+     <div class="page-nav" id="navOne">
+       <nav role="navigation">
+         <ul class="nav-primary">
+           <li class="icon-home is-selected"><a href="index.html">Home</a></li>
+           <li class="icon-help"><a href="about.html" >About</a></li>
+           <li class="icon-work-team"><a href="what-we-do.html">Our services</a></li>
+           <li class="icon-team"><a href="careers.html">Careers</a></li>
+           <li class="icon-contact"><a href="contact.html">Contact</a></li>
+         </ul>
+       </nav>
+     </div>
+     <nav class="nav-lang">
+       <ul>
+         <li><a href="#" class="nav-lang--selected">FR</a></li>
+         <li><a href="#">EN</a></li>
+       </ul>
+     </nav>
+   </div>
+ </header>
+ <div class="page-header-mobile">
+   <a href="index.html" class="page-logo-color"><img src="images/logo-agilepartner.png"  alt=" " /></a>
+   <a href="index.html" class="page-logo-white"><img src="images/logo-agilepartner.png"  alt=" " /></a>
+   <nav class="nav-lang">
+     <ul>
+       <li><a href="#" class="nav-lang--selected">FR</a></li>
+       <li><a href="#">EN</a></li>
+     </ul>
+   </nav>
+ </div>

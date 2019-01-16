@@ -9,6 +9,10 @@ html, body {
   @media(max-width: 767px) {
     font-size: 50%;
   }
+
+  @media(max-width: 320px) {
+    font-size: 45%;
+  }
 }
 
 body, input, select, textarea, button {
@@ -104,10 +108,14 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 900;
   margin-bottom: 0;
   color: $main-color;
+
+  @media(max-width: 320px) {
+    font-size: 3rem;
+  }
 }
 
 h3 {

@@ -2,12 +2,14 @@
 
 @import 'abstracts/variables';
 @import 'abstracts/colors';
-@import 'abstracts/helpers';
 @import 'abstracts/mixins';
+@import 'abstracts/helpers';
+;
 
 
 @import 'base/reset';
 @import 'base/typography';
+@import 'base/icomoon';
 
 @import 'components/box';
 @import 'components/buttons';

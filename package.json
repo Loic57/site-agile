@@ -38,7 +38,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-wait": "^0.0.2",
-    "run-sequence": "^2.2.1"
+    "run-sequence": "^2.2.1",
+    "typedjs": "^0.2.2"
   },
   "repository": {
     "type": "git",

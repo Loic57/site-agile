@@ -137,10 +137,25 @@
 
 
 .grid-contact-banner {
-  .column:last-child {text-align: right;}
+  .column{text-align: center;}
+  h2 {
+    font-size: 3.5rem;
+    margin-top: 0!important;
+
+  }
 
   @media(max-width: 767px) {
     .column {text-align: center!important;}
+  }
+}
+
+.grid-contact {
+  h2
+  {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+
   }
 }
 
@@ -150,6 +165,28 @@
 
 .grid-awards {
   img {width: 250px;}
+
+  @media(max-width: 767px) {
+    .column {
+      max-width: 33.3333%;
+      flex: 0 0 33.3333%;
+    }
+
+    img {width: 200px;}
+  }
+
+  @media(max-width: 375px) {
+    .column {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+  }
+}
+
+.grid-policy {
+  img {width: 250px;}
+
+  text-align: left;
 
   @media(max-width: 767px) {
     .column {
@@ -249,6 +286,62 @@
     .column {
       flex: 0 0 50%;
       max-width: 50%;
+    }
+  }
+
+  @media(max-width: 375px) {
+    .column {
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.grid-board {
+  @media(max-width: 768px) {
+    .column {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media(max-width: 375px) {
+    .column {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.grid-values {
+  @media(max-width: 767px) {
+    .column {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media(max-width: 360px) {
+    .column {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+
+.grid-2 {
+
+  &:nth-child(odd) {
+    .box-service-1 {
+      .box-service-1__content {@include flex-order(1);}
+    }
+  }
+
+  @media(max-width: 767px) {
+    & + .grid-2 {
+      margin-top: 5rem;
     }
   }
 }

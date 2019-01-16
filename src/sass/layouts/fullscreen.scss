@@ -2,42 +2,67 @@
   @include flex-container();
   @include flex-direction-column();
   align-items: center;
-  text-align: center;
-  height: 63vh;
-  position: relative;
+  height: 84vh;
   z-index: 1;
+  position: relative;
+  padding: 6rem 10rem;
+  background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
 
   &:before {
     @include position(absolute, 0,0,0,0);
     content: "";
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(0,0,0,0.8);
     z-index: -1;
   }
 
-  h1, p {color: $gray-darkest;letter-spacing: 1px;}
-  p {font-size: 2rem;}
-  h1 {text-transform: uppercase;font-weight: 900;}
 
-  span {color: $main-color;}
 
-  > .page-wrapper {
-    position: relative;
-    top: 40px;
+  .page-wrapper {
+    padding: 0;
+    @include flex-container();
+    @include flex-direction-column();
   }
 
-  .customers {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
+  h1 {
+    font-size: 8rem;
+    font-weight: 900;
+    text-align: center;
+    color: #ffffff;
+
+
   }
 
+  .typed-cursor {opacity: 0;}
+
+  a {width: 350px;margin: auto;}
+
+
+  @media(max-width: 1200px) {
+    h1 {font-size: 7rem;max-width: 100%;}
+  }
+
+  @media(max-width: 1100px) {
+    padding: 3rem;
+  }
 
   @media(max-width: 767px) {
+    height: 72vh;
+    h1 {font-size: 6rem;}
+  }
+
+  @media(max-width: 480px) {
     h1 {font-size: 4rem;}
-    p {font-size: 2rem;}
+    a {width: 300px;}
+  }
+
+  @media(max-width: 375px) {
+    height: 75vh;
+  }
+
+  @media(max-width: 320px) {
+    height: 100vh;
+    h1 {font-size: 4rem;}
+    a {width: 250px;}
   }
 }

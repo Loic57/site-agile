@@ -1,14 +1,22 @@
 <!-- @@include includes/header.html -->
 
 	<main>
-		<section class="page-fullscreen" style="background-image: url('images/agilepartner-fond.jpg')">
-			<div class="page-wrapper">
-				<h1>the <span>agile</span> software factory</h1>
-				<p>We develop softwares, with agility</p>
+		<section class="page-fullscreen text-center" id="fullscreenHomepage" style="background-image: url('images/agilepartner-fond-homepage.jpg')">
+			<div class="page-wrapper full-width">
+				<div id="typed-strings">
+					<span><span class="c-main-color mr-2">We</span>develop software's with agility</span>
+		      <span><span class="c-main-color mr-2">We</span>develop team's agility</span>
+		      <span><span class="c-main-color mr-2">You</span>get faster delivery</span>
+		      <span><span class="c-main-color mr-2">You</span>get better user satisfaction</span>
+					<span><span class="c-main-color mr-2">Agile partner:</span> The agile software company</span>
+				</div>
+				<h1 id="bigTitle"></h1>
+
+				<a href="#" class="btn bg-main-color">Meet with our experts</a>
 			</div>
 		</section>
 
-		<div class="customers">
+		<div class="section-2 customers p-0">
 			<div class="page-wrapper page-wrapper--full-width">
 				<div class="grid-flex grid-customers v-align-middle">
 					<div class="column"><img src="images/agilepartner-logo-alterdomus.jpg" alt="agilepartner-alterdomus" /></div>
@@ -26,25 +34,35 @@
 		</div>
 
 
-		<section class="section-bg-gradient">
+		<section class="section-4">
 			<div class="page-wrapper">
-				<h2>Our services</h2>
-				<div class="grid-flex">
-					<div class="column">
-						<a href="softwares-dev.html" class="box-service-1">
-							<h3>Software</h3>
-							<span>development</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-							<div class="btn bg-main-color">See more details</div>
-						</a>
+				<div class="section-4__title">
+					<h2>Our services</h2>
+				</div>
+				<div class="grid-2">
+					<div class="box-service-1">
+						<div class="box-service-1__content">
+							<h3>Software development</h3>
+							<p>developers of software factory
+								using agile methods
+								and latest technologies
+							</p>
+							<a href="what-we-do.html#software-development" class="btn bg-main-color">How we do it</a>
+						</div>
+						<div class="box-service-1__image" style="background-image: url('images/agilepartner-visual-10.jpg');"></div>
 					</div>
-					<div class="column">
-						<a href="#" class="box-service-1">
-							<h3>skills</h3>
-							<span>development</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-							<div class="btn bg-main-color">See more details</div>
-						</a>
+				</div>
+				<div class="grid-2">
+					<div class="box-service-1">
+						<div class="box-service-1__content">
+							<h3>Team's agility development</h3>
+							<p>
+								We introduce agility into your organization to create value.
+								We support your digital transformation with less stress and pressure.
+							</p>
+							<a href="what-we-do.html#skills-development" class="btn bg-main-color">How we do it</a>
+						</div>
+						<div class="box-service-1__image" style="background-image: url('images/agilepartner-visual-11.jpg');"></div>
 					</div>
 				</div>
 			</div>
@@ -52,7 +70,7 @@
 
 		<section class="section-2">
 			<div class="page-wrapper">
-				<h2>AWARDS / CERTIFICATIONS</h2>
+				<h2>Awards & Certifications</h2>
 				<div class="grid-flex mt-3 grid-awards">
 					<div class="column"><img src="images/agilepartner-logo-microsoft.jpg"></div>
 					<div class="column"><img src="images/agilepartner-logo-greatplacetowork.jpg"></div>
@@ -62,15 +80,59 @@
 			</div>
 		</section>
 
+		<section class="section-5" style="background-image: url('images/agilepartner-awards-2.jpg');">
+			<div class="page-wrapper">
+				<div class="section-5__title">
+					<h2>Welcome @Agile Partner</h2>
+					<p>You search challenges but not stress & pressure? <a href="careers.html">Work with us!</a></p>
+				</div>
 
-		<section class="section-3" style="background-image: url('images/agilepartner-visual-1.jpg');">
+				<div class="grid-flex grid-jobs">
+	        <div class="column w-33">
+	          <a href="single-job.html" class="box-job">
+	            <div class="box-job__image"><img src="images/agilepartner-java.svg" alt="agilepartner-java"></div>
+	            <div class="box-job__content">
+	              <h3>Java Developer</h3>
+	              <span class="content__type">Mission chez client</span>
+	              <span class="content__location">Strassen, LU</span>
+	              <!--<span class="content__date">Il y a une semaine</span>-->
+	            </div>
+	          </a>
+	        </div>
+	        <div class="column w-33">
+	          <a href="single-job.html" class="box-job">
+	            <div class="box-job__image"><img src="images/agilepartner-ux.png" alt="agilepartner-java"></div>
+	            <div class="box-job__content">
+	              <h3>UX Researcher</h3>
+	              <span class="content__type">Mission chez client</span>
+	              <span class="content__location">Strassen, LU</span>
+	              <!--<span class="content__date">Il y a une semaine</span>-->
+	            </div>
+	          </a>
+	        </div>
+	        <div class="column w-33">
+	          <a href="single-job.html" class="box-job">
+	            <div class="box-job__image"><img src="images/agilepartner-manager.svg" alt="agilepartner-java"></div>
+	            <div class="box-job__content">
+	              <h3>Product Manager</h3>
+	              <span class="content__type">Poste en interne</span>
+	              <span class="content__location">Bertrange, LU</span>
+	              <!--<span class="content__date">Il y a une semaine</span>-->
+	            </div>
+	          </a>
+	        </div>
+	      </div>
+			</div>
+		</section>
+
+		<section class="section-3">
 			<div class="page-wrapper">
 				<div class="grid-flex v-align-middle grid-contact-banner">
-					<div class="column">
-						<h2>Nous sommes là pour vous !</h2>
+					<div class="column w-100">
+						<h2>Interested? Get a free presentation of our business cases.</h2>
 					</div>
-					<div class="column">
-						<a href="#" class="btn bg-white big">Contactez-nous</a>
+					<div class="column w-100">
+						<a href="#" class="btn bg-white big fa-long-arrow-alt-right">Contact our Sales & Customer Service</a>
 					</div>
 				</div>
 			</div>

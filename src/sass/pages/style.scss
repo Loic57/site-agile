@@ -1,12 +1,8 @@
 
-.page-header.page-header--left-bar + .page-header--mobile + .page-content,
-.page-header.page-header--left-bar + .page-header--mobile + main,
-.page-header.page-header--left-bar + .page-header--mobile + .page-fullscreen {
-  margin-left: 30rem;
-  @media(max-width: 1024px) {
-    margin-left: 0;
-  }
+html, body {
+  overflow-x: hidden;
 }
+
 
 
 .page-content {
@@ -25,6 +21,7 @@
 
 .customers {
   text-align: center;
+  border-top: 1px solid $gray-lightest;
 }
 
 
@@ -75,7 +72,7 @@
   top: 0;
   bottom: 0;
   width: 300px;
-  
+
 
   .test {
     background: blue;

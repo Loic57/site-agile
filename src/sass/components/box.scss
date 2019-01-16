@@ -504,38 +504,68 @@
 
 
 .box-service-1 {
-	background-color: #ffffff;
-	text-align: center;
-	padding: 6rem 4rem;
-	border-radius: 4px;
-	display: block;
+
 	box-shadow: 0;
 	@include transition(0.3s);
+	height: 400px;
+	@include flex-container();
+	@include flex-direction-row();
+	align-items: center;
+	background-color: #ffffff;
 
-	&:hover {
-		box-shadow: 1px 2px 35px -4px rgba(0,0,0,0.6);
+	/*&:hover {
+		box-shadow: 0 2px 20px 0 rgba(0,0,0,0.08);
 		@include transition(0.3s);
+	}*/
+
+	.box-service-1__content {
+		text-align: left;
+		padding: 5rem;
+		flex: 0 0 50%;
+		max-width: 50%;
+
+		h3 {
+			color: $main-color;
+			font-weight: 900;
+			margin-bottom: 2rem;
+			font-size: 3rem;
+			margin-top: 0;
+		}
+
+		p {
+			color: $color-text!important;
+		}
 	}
 
-	h3 {
-		text-transform: uppercase;
-		color: $main-color;
-		font-weight: 900;
-		margin-bottom: 0;
-		font-size: 3rem;
-		margin-top: 0;
+	.box-service-1__image {
+		height: 400px;
+		flex: 0 0 50%;
+		max-width: 50%;
 	}
 
-	span {
-		color: $gray-darkest;
-		font-weight: 700;
-		font-size: 2.6rem;
-		display: block;
-		margin-bottom: 3rem;
+	@media(max-width: 1024px) {
+		height: 400px;
+		.box-service-1__image {height: 400px;}
 	}
 
-	p {
-		color: $color-text!important;
+	@media(max-width: 767px) {
+		height: auto;
+		background-color: #ffffff;
+		@include flex-direction-column();
+
+		.box-service-1__content {
+			text-align: left;
+			padding: 5rem 3rem;
+			flex: 0 0 100%;
+			max-width: 100%;
+			height: auto;
+		}
+
+		.box-service-1__image {
+			display: none;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
 	}
 }
 
@@ -544,9 +574,11 @@
 	@include flex-v-align-center();
 	@include transition(0.2s);
 	border-radius: 4px;
-	box-shadow: 0 2px 20px 0 rgba(0,0,0,0.08);
+	//box-shadow: 0 2px 20px 0 rgba(0,0,0,0.08);
 	position: relative;
 	padding: 2rem;
+	text-align: left;
+	background-color: #ffffff;
 	border: 1px solid $gray-lightest;
 
 	.box-job__image {
@@ -599,11 +631,8 @@
 	}
 
 	&:hover {
-		background-color: rgba($main-color, 0.8);
-		@include transition(0.2s);
-		.box-job__content {
-			h3, .content__location, .content__type, .content__date, .content__date:after {color: #ffffff;}
-		}
+		box-shadow: 0 2px 20px 0 rgba(0,0,0,0.08);
+		@include transition(0.3s);
 	}
 
 	@media(max-width: 767px) {
@@ -625,4 +654,127 @@
 
 	a {color: #ffffff;}
 
+}
+
+
+.box-fact {
+	.box-fact__number {
+		color: $gray-darkest;
+		font-weight: 900;
+		font-size: 6rem;
+	}
+
+	.box-fact__text {
+		font-weight: 300;
+		font-size: 1.6rem;
+	}
+}
+
+.box-value {
+	text-align: center;
+
+	p {
+		max-width: 60%;
+		margin: auto;
+		font-size: 2rem;
+		font-weight: 600;
+		color: $gray-darkest;
+	}
+
+	i {
+		font-size: 8rem;
+		margin-bottom: 2rem;
+		display: block;
+		color: $main-color;
+	}
+
+	@media(max-width: 1023px) {
+		p {max-width: 80%;}
+	}
+
+	@media(max-width: 767px) {
+		p {max-width: 80%;}
+	}
+}
+
+.box-contact {
+	text-align: center;
+	margin-bottom: 5rem;
+	p {
+		margin-bottom: 0.5rem;
+		color: $gray-darkest;
+		font-size: 2rem;
+		font-weight: 700;
+	}
+
+	a {
+		display: block;
+		margin-bottom: 0.5rem;
+		color: $gray-darkest;
+		font-weight: 500;
+	}
+
+	a:hover {text-decoration: underline;}
+
+}
+
+
+.box-user {
+	position: relative;
+	box-shadow: 0 2px 20px 0 rgba(0,0,0,0.08);
+	overflow: hidden;
+
+	.box-user__content {
+		padding: 2rem 3rem;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+
+		background-color: #ffffff;
+		@include translateY(82%);
+		@include transition(0.5s);
+
+		h3 {
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+
+		p:last-child {
+			display: none;
+		}
+	}
+
+	@media(max-width: 1500px) {
+		.box-user__content {
+			padding: 1rem 2rem;
+			@include translateY(78%);
+			h3 {font-size: 2rem;}
+
+			p:last-child {font-size: 1.4rem;}
+
+		}
+	}
+
+
+	@media(max-width: 1024px) {
+		.box-user__content {
+			padding: 1rem 2rem;
+			@include transform(none);
+			top: auto;
+			bottom: 0;
+			h3 {font-size: 2rem;}
+			p {margin-bottom: 0;}
+			p:last-child {
+				display: none;
+			}
+		}
+
+		&:hover {
+			.box-user__content {
+				@include transform(none);
+			}
+		}
+	}
 }

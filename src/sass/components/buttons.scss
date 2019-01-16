@@ -9,7 +9,6 @@
   border: 1px solid transparent;
   text-decoration: none;
   background-origin: border-box;
-  border-radius: 5px;
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
@@ -22,6 +21,8 @@
     &.small {padding: 1rem 4rem 1rem 2rem;}
     &.smaller {padding: 0.9rem 4rem 0.9rem 2rem;}
     &.smallest {padding: 0.8rem 4rem 0.8rem 2rem;}
+
+    &.big {padding: 1.5rem 6rem 1.5rem 3rem;}
 
     &.left {
       padding: 1rem 2rem 1rem 5rem;
@@ -121,7 +122,7 @@
   }
 
   &.bg-main-color {
-    &:hover, &:focus {background-color: darken($main-color, 20%);}
+    &:hover, &:focus {background-color: $main-color-light;}
   }
 
   &.bg-main-color-light {
