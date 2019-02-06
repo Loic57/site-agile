@@ -4,7 +4,6 @@
 @import 'abstracts/colors';
 @import 'abstracts/mixins';
 @import 'abstracts/helpers';
-;
 
 
 @import 'base/reset';
@@ -13,16 +12,16 @@
 
 @import 'components/box';
 @import 'components/buttons';
-@import 'components/forms';
+//@import 'components/forms';
 @import 'components/lists';
-@import 'components/modals';
-@import 'components/tabs';
+//@import 'components/modals';
+//@import 'components/tabs';
 
 @import 'layouts/fullscreen';
 @import 'layouts/footer';
 @import 'layouts/grid';
 @import 'layouts/header';
-@import 'layouts/navigation';
+//@import 'layouts/navigation';
 @import 'layouts/section';
 @import 'layouts/section-title';
 @import 'layouts/wrapper';

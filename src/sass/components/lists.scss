@@ -36,20 +36,6 @@ ol.list-1 {
 }
 
 
-dl {
-  @include flex-container();
-  flex-wrap: wrap;
-
-  dt {
-    width: 33.33333%;
-    padding-right: 1rem;
-    font-weight: 700;
-    color: #000000;
-  }
-
-  dd {width: 66.66666%;margin-bottom: 1rem;}
-}
-
 .list-social {
   position: relative;
   display: inline-block;
@@ -85,7 +71,7 @@ dl {
 
       &:hover {
         background-color: $main-color;
-        color: #ffffff;
+        color: #ffffff!important;
         border-color: $main-color;
         @include transition(0.2s);
       }

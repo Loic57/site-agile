@@ -27,15 +27,17 @@
   h1 {
     font-size: 8rem;
     font-weight: 900;
-    text-align: center;
     color: #ffffff;
+    text-align: left;
+  }
 
-
+  a {
+    max-width: 350px;
   }
 
   .typed-cursor {opacity: 0;}
 
-  a {width: 350px;margin: auto;}
+
 
 
   @media(max-width: 1200px) {

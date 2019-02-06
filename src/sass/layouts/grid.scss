@@ -44,20 +44,16 @@
   }
 
 
-  //Loop for creating offset
-  @for $i from 1 through 100 {
-    @if ($i == 33) {
-      .o-#{$i} { margin-left: 33.3333%;}
-    }
-
-    @elseif ($i == 66) {
-      .o-#{$i} { margin-left: 66.6667%;}
-    }
-
-    @else {
-      .o-#{$i} { margin-left: percentage($i / 100);}
-    }
-  }
+  .w-20 { max-width: 20%;flex: 0 0 20%; }
+  .w-25 { max-width: 25%;flex: 0 0 25%; }
+  .w-33 { max-width: 33.3333%;flex: 0 0 33.3333%; }
+  .w-50 { max-width: 50%;flex: 0 0 50%; }
+  .w-60 { max-width: 60%;flex: 0 0 60%; }
+  .w-66 { max-width: 66.6667%;flex: 0 0 66.6667%; }
+  .w-70 { max-width: 70%;flex: 0 0 70%; }
+  .w-75 { max-width: 75%;flex: 0 0 75%; }
+  .w-80 { max-width: 80%;flex: 0 0 80%; }
+  .w-100 { max-width: 100%;flex: 0 0 100%; }
 
   @media(max-width: 767px) {
     .column {
@@ -138,6 +134,7 @@
 
 .grid-contact-banner {
   .column{text-align: center;}
+
   h2 {
     font-size: 3.5rem;
     margin-top: 0!important;
@@ -150,12 +147,26 @@
 }
 
 .grid-contact {
+  text-align: center;
+  img {max-width: 250px;}
+  p:last-of-type {min-height: 50px;}
   h2
   {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
+    min-height: 100px;
+  }
 
+  @media(max-width: 1024px) {
+    h2 {font-size: 2.6rem;}
+  }
+
+  @media(max-width: 767px) {
+    p:last-of-type {min-height: inherit;}
+    h2 {min-height: inherit;}
+
+    a {margin-bottom: 5rem;}
   }
 }
 

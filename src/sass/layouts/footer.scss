@@ -7,9 +7,12 @@
     font-size: 1.6rem;
   }
 
+  p {padding: 0;}
+
   img {width: 300px;}
 
   h6 {margin-bottom: 2rem;font-size: 2rem;margin-top: 0;}
+
   ul {
     li {
       margin-bottom: 1rem;
@@ -17,6 +20,13 @@
         color: $color-text;
         &:hover {color: $main-color;}
       }
+    }
+  }
+
+  .list-social {
+    &:before {content: none;}
+    li {
+      margin: 0 1.5rem;
     }
   }
 
